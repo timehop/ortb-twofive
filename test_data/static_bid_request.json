@@ -1,0 +1,85 @@
+{
+    "id": "73e64f05-5dcf-488d-a4d4-34b2dd20b4b9",
+    "imp": [
+      {
+        "id": "73e64f05-5dcf-488d-a4d4-34b2dd20b4b9",
+        "banner": {
+          "w": 320,
+          "h": 480,
+          "pos": 7,
+          "api": [
+            3,
+            5
+          ]
+        },
+        "displaymanagerserver": "Nimbus",
+        "instl": 1,
+        "bidfloor": 2,
+        "secure": 1
+      }
+    ],
+    "app": {
+      "id": "73e64f05-5dcf-488d-a4d4-34b2dd20b4b9",
+      "name": "foo",
+      "bundle": "bundle.com",
+      "domain": "https://foo.com",
+      "storeurl": "https://itunes.apple.com/us/app/foo",
+      "cat": [
+        "IAB14",
+        "IAB1",
+        "IAB9",
+        "IAB12",
+        "IAB16",
+        "IAB17",
+        "IAB18",
+        "IAB20"
+      ],
+      "ver": "4.2.4",
+      "privacypolicy": 1,
+      "paid": 0,
+      "publisher": {
+        "name": "foo",
+        "domain": "https://foo.com"
+      }
+    },
+    "device": {
+      "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4",
+      "geo": {
+        "lat": 37.751,
+        "lon": -97.822,
+        "ipservice": 3,
+        "country": "USA",
+        "city": "New York"
+      },
+      "dnt": 0,
+      "lmt": 0,
+      "ip": "174.193.148.18",
+      "make": "Apple",
+      "model": "iPhone",
+      "os": "ios",
+      "osv": "10.3.2",
+      "language": "en",
+      "carrier": "Verizon",
+      "connection_type": 6,
+      "ifa": "1N1F8C2C-60D9-5000-971B-6158BD7A0E50"
+    },
+    "user": {
+      "gender": "M",
+      "ext": {
+        "consent": "BOPS4F7OPP0yWAAAABENA7-AAAAUrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      }
+    },
+    "format":{
+      "h": 480,
+      "w": 360
+    },
+    "at": 1,
+    "regs": {
+      "ext": {
+        "gdpr": 1
+      }
+    },
+    "ext": {
+      "api_key": "a9394670-8d87-4ca9-a49c-129a16b467cb"
+    }
+  }
