@@ -246,7 +246,9 @@ type Publisher struct {
 }
 
 // PublisherExt ...
-type PublisherExt struct{}
+type PublisherExt struct {
+	FacebookAppID string `json:"facebook_app_id"  valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
+}
 
 // Content object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
 // content. This object may be useful when syndicated content contains impressions and does
