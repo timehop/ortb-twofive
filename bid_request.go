@@ -323,7 +323,7 @@ type Device struct {
 	FlashVer       string     `json:"flash_ver,omitempty"       valid:"-"`
 	Language       string     `json:"language,omitempty"        valid:"-"`
 	Carrier        string     `json:"carrier,omitempty"         valid:"-"`
-	ConnectionType int        `json:"connection_type,omitempty" valid:"-"`
+	ConnectionType int        `json:"connectiontype,omitempty" valid:"-"`
 	Ifa            string     `json:"ifa"                       valid:"required"`
 	Ext            *DeviceExt `json:"ext,omitempty"             valid:"-"`
 }
