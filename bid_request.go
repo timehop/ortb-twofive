@@ -112,13 +112,14 @@ type MetricExt struct{}
 // generalized and full featured video ad units). An array of Banner objects can also appear within the
 // Video to describe optional companion ads defined in the VAST specification.
 type Banner struct {
-	Format []Format   `json:"format,omitempty" valid:"optional"`
-	W      int        `json:"w,omitempty"      valid:"-"`
-	H      int        `json:"h,omitempty"      valid:"-"`
-	ID     string     `json:"id,omitempty"     valid:"optional"`
-	Pos    int        `json:"pos,omitempty"    valid:"range(0|7),optional"`            // 0,1,2,3,4,5,6,7 -> Unknown,Above the Fold,DEPRECATED - May or may not be initially visible depending on screen size/resolution.,Below the Fold,Header,Footer,Sidebar,Full Screen
-	API    []int      `json:"api,omitempty"    valid:"inintarr(1|2|3|4|5|6),optional"` // 3,5,6 -> mraid1, 2, and 3
-	Ext    *BannerExt `json:"ext,omitempty"    valid:"_"`
+	BidFloor *float64   `json:"bidfloor,omitempty" valid:"-"`
+	Format   []Format   `json:"format,omitempty"   valid:"optional"`
+	W        int        `json:"w,omitempty"        valid:"-"`
+	H        int        `json:"h,omitempty"        valid:"-"`
+	ID       string     `json:"id,omitempty"       valid:"optional"`
+	Pos      int        `json:"pos,omitempty"      valid:"range(0|7),optional"`            // 0,1,2,3,4,5,6,7 -> Unknown,Above the Fold,DEPRECATED - May or may not be initially visible depending on screen size/resolution.,Below the Fold,Header,Footer,Sidebar,Full Screen
+	API      []int      `json:"api,omitempty"      valid:"inintarr(1|2|3|4|5|6),optional"` // 3,5,6 -> mraid1, 2, and 3
+	Ext      *BannerExt `json:"ext,omitempty"      valid:"-"`
 }
 
 // BannerExt ...
@@ -130,6 +131,7 @@ type BannerExt struct{}
 // optionally including an array of Banner objects (refer to the Banner object in Section 3.2.3) that define
 // these companion ads.
 type Video struct {
+	BidFloor       *float64  `json:"bidfloor,omitempty"       valid:"-"`
 	Mimes          []string  `json:"mimes,omitempty"          valid:"-"`
 	Minduration    int       `json:"minduration"              valid:"-"`
 	Maxduration    int       `json:"maxduration,omitempty"    valid:"-"`
