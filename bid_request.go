@@ -35,8 +35,8 @@ type Request struct {
 
 // RequestExt used to communicate the publishers api key
 type RequestExt struct {
-	ID     int    `json:"id" valid:"-"`
-	APIKey string `json:"api_key" valid:"uuidv4,required"`
+	APIKey    string `json:"api_key"    valid:"uuidv4,required"`
+	SessionID string `json:"session_id" valid:"required"`
 }
 
 // Source describes the nature and behavior of the entity that is the source of the bid request
