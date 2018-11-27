@@ -369,8 +369,9 @@ type User struct {
 
 // UserExt being used for GDPR
 type UserExt struct {
-	Consent string `json:"consent,omitempty" valid:"base64rawstring,optional"`
-	Age     int    `json:"age,omitempty" valid:"_"` // age used incase year of birth can't be passed and age can
+	Consent    string `json:"consent,omitempty" valid:"base64rawstring,optional"`
+	Age        int    `json:"age,omitempty" valid:"_"`                           // age used incase year of birth can't be passed and age can
+	DidConsent int    `json:"did_consent,omitempty" valid:"range(0|1),optional"` // extention for apps to indicate a user accepted gdpr
 }
 
 // Data and Segment objects together allow additional data about the user to be specified. This data
