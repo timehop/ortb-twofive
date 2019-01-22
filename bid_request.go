@@ -249,7 +249,8 @@ type Publisher struct {
 
 // PublisherExt ...
 type PublisherExt struct {
-	FacebookAppID string `json:"facebook_app_id"  valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
+	FacebookAppID         string `json:"facebook_app_id"  valid:"-"`          // needed for pubs that have FB hybrid SDK solution in thier stack
+	IsGoogleParticipating bool   `json:"is_google_participating "  valid:"-"` // a temporary condition (experiment) to determine if google is participating in the Nimbus auction
 }
 
 // Content object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
