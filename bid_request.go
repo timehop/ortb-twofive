@@ -89,7 +89,9 @@ type Imp struct {
 }
 
 // ImpExt ...
-type ImpExt struct{}
+type ImpExt struct {
+	Position string `json:"position,omitempty" valid:"-"` // flexible optional field for publishers to track on ad position performance
+}
 
 // Metric is associated with an impression as an array of metrics. These metrics can offer insight into
 // the impression to assist with decisioning such as average recent viewability, click-through rate, etc. Each
