@@ -253,6 +253,7 @@ type Publisher struct {
 type PublisherExt struct {
 	FacebookAppID string `json:"facebook_app_id"  valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
 	GoogleID      string `json:"google_id"       valid:"-"`  // a temporary condition (experiment) to determine if google is participating in the Nimbus auction
+	AmazonKV      string `json:"amazon_kv"       valid:"-"`  // Amazon Publisher Services key-value pairs extracted from APS SDK response
 }
 
 // Content object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
