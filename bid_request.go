@@ -251,30 +251,19 @@ type Publisher struct {
 
 // PublisherExt ...
 type PublisherExt struct {
-	FacebookAppID string `json:"facebook_app_id"  valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
-	GoogleID      string `json:"google_id"       valid:"-"`  // a temporary condition (experiment) to determine if google is participating in the Nimbus auction
-	APS           *APS   `json:"aps"             valid:"-"`  // Amazon Publisher Services key-value pairs extracted from APS SDK response
+	FacebookAppID string `json:"facebook_app_id" valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
+	GoogleID      string `json:"google_id"       valid:"-"` // a temporary condition (experiment) to determine if google is participating in the Nimbus auction
+	APS           *APS   `json:"aps"             valid:"-"` // Amazon Publisher Services key-value pairs extracted from APS SDK response
 }
 
 // APS is the response Object the APS sdk generates
-// example https://goplay.space/#GwbYSqQZizh
 type APS struct {
-	Ads           map[string]apsData `json:"ads"`
-	InstrPixelURL string             `json:"instrPixelURL"`
-	ErrorCode     string             `json:"errorCode"`
-	RequestID     string             `json:"request_id"`
-	Status        string             `json:"status"`
-}
-
-type apsData struct {
-	B   string `json:"b"`
-	KVP struct {
-		Amznrdr []string `json:"amznrdr"`
-		Amznp   []string `json:"amznp"`
-		DC      []string `json:"dc"`
-	} `json:"kvp"`
-	SZ string `json:"sz"`
-	I  string `json:"i"`
+	AmznB     []string `json:"amzn_b"`
+	AmznH     []string `json:"amzn_h"`
+	Amznp     []string `json:"amznp"`
+	Amznrdr   []string `json:"amznrdr"`
+	Amznslots []string `json:"amznslots"`
+	Dc        []string `json:"dc"`
 }
 
 // Content object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
