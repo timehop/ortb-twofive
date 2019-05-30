@@ -89,8 +89,13 @@ type Imp struct {
 }
 
 // ImpExt ...
+
 type ImpExt struct {
-	Position string `json:"position,omitempty" valid:"-"` // flexible optional field for publishers to track on ad position performance
+	APS           *APS   `json:"aps,omitempty"             valid:"-"`
+	GoogleID      string `json:"google_id,omitempty"       valid:"-"` // a tempary condition (experiment) to determine if google is participating in the Nimbus auction
+	FacebookAppID string `json:"facebook_app_id,omitempty" valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
+	Position      string `json:"position,omitempty"        valid:"-"` // flexible optional field for publishers to track on ad position performance
+	Viewability   int    `json:"viewability,omitempty"     valid:"-"` // for demand
 }
 
 // Metric is associated with an impression as an array of metrics. These metrics can offer insight into
@@ -250,11 +255,7 @@ type Publisher struct {
 }
 
 // PublisherExt ...
-type PublisherExt struct {
-	FacebookAppID string `json:"facebook_app_id" valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
-	GoogleID      string `json:"google_id"       valid:"-"` // a temporary condition (experiment) to determine if google is participating in the Nimbus auction
-	APS           *APS   `json:"aps"             valid:"-"` // Amazon Publisher Services key-value pairs extracted from APS SDK response
-}
+type PublisherExt struct{}
 
 // APS is the response Object the APS sdk generates
 type APS struct {
