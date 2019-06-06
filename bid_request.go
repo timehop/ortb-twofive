@@ -258,13 +258,15 @@ type Publisher struct {
 type PublisherExt struct{}
 
 // APS is the response Object the APS sdk generates
+// this should just pass through the information the clients sent
 type APS struct {
-	AmznB     []string `json:"amzn_b"`
-	AmznH     []string `json:"amzn_h"`
-	Amznp     []string `json:"amznp"`
-	Amznrdr   []string `json:"amznrdr"`
-	Amznslots []string `json:"amznslots"`
-	Dc        []string `json:"dc"`
+	AmznB     interface{} `json:"amzn_b"`
+	AmznVid   interface{} `json:"amzn_vid"`
+	AmznH     interface{} `json:"amzn_h"`
+	Amznp     interface{} `json:"amznp"`
+	Amznrdr   interface{} `json:"amznrdr"`
+	Amznslots interface{} `json:"amznslots"`
+	Dc        interface{} `json:"dc"`
 }
 
 // Content object describes the content in which the impression will appear, which may be syndicated or nonsyndicated
