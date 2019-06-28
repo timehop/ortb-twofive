@@ -91,7 +91,7 @@ type Imp struct {
 // ImpExt ...
 
 type ImpExt struct {
-	APS           *APS   `json:"aps,omitempty"             valid:"-"`
+	APS           []APS  `json:"aps,omitempty"             valid:"-"`
 	GoogleID      string `json:"google_id,omitempty"       valid:"-"` // a tempary condition (experiment) to determine if google is participating in the Nimbus auction
 	FacebookAppID string `json:"facebook_app_id,omitempty" valid:"-"` // needed for pubs that have FB hybrid SDK solution in thier stack
 	Position      string `json:"position,omitempty"        valid:"-"` // flexible optional field for publishers to track on ad position performance
