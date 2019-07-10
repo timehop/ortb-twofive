@@ -89,7 +89,6 @@ type Imp struct {
 }
 
 // ImpExt ...
-
 type ImpExt struct {
 	APS           []APS  `json:"aps,omitempty"             valid:"-"`
 	GoogleID      string `json:"google_id,omitempty"       valid:"-"` // a tempary condition (experiment) to determine if google is participating in the Nimbus auction
