@@ -120,6 +120,7 @@ type MetricExt struct{}
 // Video to describe optional companion ads defined in the VAST specification.
 type Banner struct {
 	BidFloor *float64   `json:"bidfloor,omitempty" valid:"-"`
+	BAttr    []int      `json:"battr,omitempty"    valid:"-"`
 	Format   []Format   `json:"format,omitempty"   valid:"optional"`
 	W        int        `json:"w,omitempty"        valid:"-"`
 	H        int        `json:"h,omitempty"        valid:"-"`
