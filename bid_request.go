@@ -52,7 +52,10 @@ type Source struct {
 }
 
 // SourceExt ...
-type SourceExt struct{}
+type SourceExt struct {
+	Omidpn string `json:"omidpn,omitempty" valid:"-"` // identifier of the OM SDK integration, this is the same as the "name" parameter of the OMID Partner object
+	Omidpv string `json:"omidpv,omitempty" valid:"-"` // (optional) Version of the OM SDK version
+}
 
 // Regs object contains any legal, governmental, or industry regulations that apply to the request. The
 // coppa flag signals whether or not the request falls under the United States Federal Trade Commission’s
